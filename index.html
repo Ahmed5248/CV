@@ -7,14 +7,19 @@
     <title>Ahmed's Personal Site</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #f4f4f4;
         }
 
         table {
             border-collapse: collapse;
             width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         table,
@@ -32,14 +37,19 @@
         img {
             display: block;
             margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             text-align: center;
+            color: #333;
         }
 
         p {
             text-align: center;
+            margin-bottom: 20px;
+            color: #555;
         }
 
         hr {
@@ -59,10 +69,32 @@
         a {
             text-decoration: none;
             color: #007BFF;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Styling for Skills table */
+        table:nth-child(3) {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Add a bit of spacing between links */
+        a + br {
+            display: none;
         }
     </style>
 </head>
@@ -91,8 +123,6 @@
     <ul>
         <li>Complete Web Development</li>
         <li>Complete iOS App Development</li>
-        <li>Full Stack Development Bootcamp: Build Real-world Projects</li>
-        <li>Machine Learning Fundamentals for Developers</li>
     </ul>
 
     <hr>
@@ -149,41 +179,6 @@
 
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
-</html>
+
