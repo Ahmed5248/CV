@@ -11,6 +11,7 @@
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         table {
@@ -43,7 +44,7 @@
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #007BFF; /* Blue color for emphasis */
         }
 
         p {
@@ -79,7 +80,7 @@
 
         h2 {
             text-align: center;
-            color: #333;
+            color: #007BFF;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
@@ -96,6 +97,25 @@
         a + br {
             display: none;
         }
+
+        /* Additional styling for links */
+        a {
+            color: #007BFF;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Background gradient for headers */
+        h1,
+        h2 {
+            background: linear-gradient(90deg, #007BFF, #00BFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
@@ -108,7 +128,7 @@
             <td>
                 <h1>AHMED</h1>
                 <p><em>A passionate <strong><a href="https://www.youtube.com/@TECHNICALAFANDI/videos">Web
-                                Developer</a></strong>.</em></p>
+                            Developer</a></strong>.</em></p>
                 <p>
                     "Passionate web developer with a focus on seamless online experiences and a commitment to
                     innovation."
@@ -180,7 +200,3 @@
 </body>
 
 </html>
-
-</body>
-
-
