@@ -12,6 +12,7 @@
             padding: 20px;
             background: linear-gradient(45deg, #4a4e69, #2b2d42);
             color: #edf0f4;
+            transition: background 0.5s ease;
         }
 
         table {
@@ -43,9 +44,12 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
-        h1 {
+        h1,
+        h2 {
             text-align: center;
-            color: #f9f9f9;
+            background: linear-gradient(90deg, #45a29e, #66fcf1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
@@ -80,49 +84,79 @@
             color: #45a29e;
         }
 
-        h2 {
-            text-align: center;
-            color: #f9f9f9;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Styling for Skills table */
-        table:nth-child(3) {
-            background-color: #292b3a;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
+        button {
+            background-color: #66fcf1;
+            color: #2b2d42;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             margin-bottom: 20px;
         }
 
-        /* Add a bit of spacing between links */
-        a + br {
-            display: none;
+        button:hover {
+            background-color: #45a29e;
         }
 
-        /* Additional styling for links */
-        a {
-            color: #66fcf1;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        a:hover {
-            color: #45a29e;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
         }
 
-        /* Background gradient for headers */
-        h1,
-        h2 {
-            background: linear-gradient(90deg, #45a29e, #66fcf1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        li {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #292b3a;
+                text-align: center;
+            }
+
+            ul.active {
+                display: flex;
+            }
+
+            li {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            button {
+                display: block;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 
 <body>
+    <button id="toggleBtn">Toggle Menu</button>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <table>
         <tr>
             <td>
@@ -133,7 +167,8 @@
                 <p><em>A passionate <strong><a href="https://www.youtube.com/@TECHNICALAFANDI/videos">Web
                             Developer</a></strong>.</em></p>
                 <p>
-                    "It's a Weakness to Want to Be Liked."
+                    "Passionate web developer with a focus on seamless online experiences and a commitment to
+                    innovation."
                 </p>
             </td>
         </tr>
@@ -199,6 +234,23 @@
     <a href="hobbies.html">My Hobbies</a><br>
     <br>
     <a href="contact.html">Contact Me</a>
+
+    <script>
+        document.getElementById("toggleBtn").addEventListener("click", function () {
+            document.querySelector("ul").classList.toggle("active");
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
